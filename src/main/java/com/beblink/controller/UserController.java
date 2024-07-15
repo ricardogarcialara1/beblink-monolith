@@ -20,7 +20,7 @@ public class UserController {
 
 
     /**
-     * Create user user.
+     * Create user.
      *
      * @param user the user
      * @return the user
@@ -36,7 +36,6 @@ public class UserController {
      *
      * @return the list
      */
-    @PreAuthorize("hasAuthority('READ_ALL_PRODUCTS')")
     @GetMapping
     public List<User> getAllUsers(){
         return userServiceImpl.getAllUsers();
@@ -49,7 +48,7 @@ public class UserController {
      * @return the user
      */
     @GetMapping("{id}")
-    public User searchUserById(@PathVariable (value = "id", required = true) String id){
+    public User searchUserById(@PathVariable (value = "id", required = true) Long id){
         return userServiceImpl.getUserById(id);
     }
 
@@ -58,8 +57,9 @@ public class UserController {
      *
      * @param id the id
      */
+    @PreAuthorize("hasAuthority('SAVE_ONE_PRODUCT')")
     @DeleteMapping("{id}")
-    public void deleteUserById(@PathVariable (value = "id", required = true) String id){
+    public void deleteUserById(@PathVariable (value = "id", required = true) Long id){
         userServiceImpl.deleteUser(id);
     }
 }

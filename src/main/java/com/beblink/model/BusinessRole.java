@@ -1,9 +1,6 @@
 package com.beblink.model;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Data;
 
 /**
@@ -15,11 +12,11 @@ import lombok.Data;
 public class BusinessRole {
 
     @Id
-    @Column(name = "business_role_id", unique = true, nullable = false)
-    private String businessRoleId;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     @Column(name = "business_id", nullable = false)
-    private String businessId;
+    private Long businessId;
 
     @Column(nullable = false)
     private String name;

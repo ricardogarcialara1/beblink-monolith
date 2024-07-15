@@ -21,5 +21,5 @@ public class BusinessUser {
     private BusinessUserId id;
 
     @Column(name = "business_role_id", nullable = false)
-    private String businessRoleId;
+    private Long businessRoleId;
 }

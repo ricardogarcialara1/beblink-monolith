@@ -11,7 +11,7 @@ import java.util.List;
  * The interface User repository.
  */
 @Repository
-public interface BusinessRepository extends JpaRepository<Business, String> {
+public interface BusinessRepository extends JpaRepository<Business, Long> {
 
     /**
      * Find all by order by name list.

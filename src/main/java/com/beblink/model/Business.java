@@ -12,8 +12,8 @@ import lombok.Data;
 public class Business {
 
     @Id
-    @Column(name = "business_id", unique = true, nullable = false)
-    private String businessId;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     @Column(nullable = false)
     private String name;

@@ -23,7 +23,7 @@ public interface UserService {
      * @param id the id
      * @return the user by id
      */
-    public User getUserById(String id);
+    public User getUserById(Long id);
 
     /**
      * Gets all users.
@@ -37,5 +37,5 @@ public interface UserService {
      *
      * @param id the id
      */
-    public void deleteUser(String id);
+    public void deleteUser(Long id);
 }

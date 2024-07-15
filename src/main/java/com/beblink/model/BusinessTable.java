@@ -19,7 +19,7 @@ public class BusinessTable {
     private String businessTableId;
 
     @Column(name = "business_id", nullable = false)
-    private String businessId;
+    private Long businessId;
 
     @Column(nullable = false)
     private Integer number;

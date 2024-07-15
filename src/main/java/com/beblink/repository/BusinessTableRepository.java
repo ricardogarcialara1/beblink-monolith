@@ -16,7 +16,7 @@ public interface BusinessTableRepository extends JpaRepository<BusinessTable, St
      * @param businessId the business id
      * @return the list
      */
-    List<BusinessTable> findByBusinessId(String businessId);
+    List<BusinessTable> findByBusinessId(Long businessId);
 
     /**
      * Find by business id and table id optional.
@@ -25,5 +25,5 @@ public interface BusinessTableRepository extends JpaRepository<BusinessTable, St
      * @param tableId    the table id
      * @return the optional
      */
-    Optional<BusinessTable> findByBusinessIdAndBusinessTableId(String businessId, String tableId);
+    Optional<BusinessTable> findByBusinessIdAndBusinessTableId(Long businessId, String tableId);
 }

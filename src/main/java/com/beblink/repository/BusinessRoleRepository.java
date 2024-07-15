@@ -9,14 +9,14 @@ import java.util.Optional;
 /**
  * The interface Business role repository.
  */
-public interface BusinessRoleRepository extends JpaRepository<BusinessRole, String> {
+public interface BusinessRoleRepository extends JpaRepository<BusinessRole, Long> {
     /**
      * Find by business id list.
      *
      * @param businessId the business id
      * @return the list
      */
-    List<BusinessRole> findByBusinessId(String businessId);
+    List<BusinessRole> findByBusinessId(Long businessId);
 
     /**
      * Find by business id and role id optional.
@@ -25,5 +25,5 @@ public interface BusinessRoleRepository extends JpaRepository<BusinessRole, Stri
      * @param roleId     the role id
      * @return the optional
      */
-    Optional<BusinessRole> findByBusinessIdAndBusinessRoleId(String businessId, String roleId);
+    Optional<BusinessRole> findByBusinessIdAndId(Long businessId, Long roleId);
 }

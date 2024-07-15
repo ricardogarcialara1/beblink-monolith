@@ -3,8 +3,6 @@ package com.beblink.repository;
 import com.beblink.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-
-import java.util.List;
 import java.util.Optional;
 
 
@@ -12,7 +10,7 @@ import java.util.Optional;
  * The interface User repository.
  */
 @Repository
-public interface UserRepository extends JpaRepository<User, String> {
+public interface UserRepository extends JpaRepository<User, Long> {
 
     /**
      * Find by username optional.

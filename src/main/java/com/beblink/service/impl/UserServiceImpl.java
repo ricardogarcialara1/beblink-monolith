@@ -36,7 +36,7 @@ public class UserServiceImpl implements UserService {
      * @return the user
      */
     @Override
-    public User getUserById(String id){
+    public User getUserById(Long id){
         Optional<User> optionalUser = userRepository.findById(id);
         return optionalUser.get();
     }
@@ -57,7 +57,7 @@ public class UserServiceImpl implements UserService {
      * @param id the id
      */
     @Override
-    public void deleteUser(String id){
+    public void deleteUser(Long id){
         userRepository.deleteById(id);
     }
 }

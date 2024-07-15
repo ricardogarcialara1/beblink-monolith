@@ -16,5 +16,5 @@ public interface BusinessUserRepository extends JpaRepository<BusinessUser, Busi
      * @param userId     the user id
      * @return the optional
      */
-    Optional<BusinessUser> findByIdBusinessIdAndIdUserId(String businessId, String userId);
+    Optional<BusinessUser> findByIdBusinessIdAndIdUserId(Long businessId, Long userId);
 }
